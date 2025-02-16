@@ -1,11 +1,11 @@
-import js from '@eslint/js';
+import pluginJs from '@eslint/js';
+import astro from 'eslint-plugin-astro';
+import jsdoc from 'eslint-plugin-jsdoc';
 
+/** @type {import('eslint').Linter.Config[]} */
 export default [
-  js.configs.recommended,
-  {
-    rules: {
-      'no-unused-vars': 'warn',
-      'no-undef': 'warn',
-    },
-  },
+  pluginJs.configs.recommended,
+  ...astro.configs.recommended,
+  jsdoc.configs['flat/recommended'],
 ];
+
