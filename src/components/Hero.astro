@@ -1,0 +1,13 @@
+---
+import SectionContainer from './SectionContainer.astro';
+---
+
+<SectionContainer id="hero">
+  <div
+    class="htmx-indicator"
+    hx-get="http://0.0.0.0:5000/components/hero"
+    hx-trigger="load"
+    hx-swap="outerHTML transition:true"
+  >
+  </div>
+</SectionContainer>
